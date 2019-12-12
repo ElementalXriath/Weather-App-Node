@@ -9,22 +9,56 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         
     </head>
     <body>
-        {{>header}}
-       <h1>Weather App</h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><i class="large material-icons">cloud_circle</i><span id="f_location"></span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    
+                </ul>
+                <form id="form" class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" id="search" type="text" placeholder="Enter Address">
+                    <button class="btn btn-outline-success my-2 my-sm-0">Search</button>
+                </form>
+            </div>
+        </nav>
+      
+        <div class="container mt-5 text-center">
+            
+            <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">Temperature</div>
+                <div class="card-body">
+                    <span class=""><i class="large material-icons">whatshot</i><h5 id="f-rain" class="card-title"></h5></span>         
+                </div>
+            </div>
+             <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">Temperature</div>
+                <div class="card-body">
+                    <span class=""><i class="large material-icons">whatshot</i><h5 id="f-rain" class="card-title"></h5></span>         
+                </div>
+            </div>
+        </div>
 
-       <form id="form">
-           <input id="search" type="text"/>
-           <button class="btn btn-primary btn-sm">Search</button>
-       </form>
+    
+       
 
-       <div>
-          Weather For <p id="forecast"></p>
-       </div>
 
-        <span class="fixed-bottom">{{>footer}}</span>
+
+
+
+       <!--Footer-->
+
+        <span class="fixed-bottom">
+            <nav class="navbar navbar-light bg-light">
+            <span class="navbar-brand mb-0 h1" id="time">Awaiting Search</span>
+            </nav>
+        </span>
         
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
