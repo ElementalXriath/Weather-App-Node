@@ -11,7 +11,11 @@ const forecast = (latitude, longitude, callback) => {
             } else {
                 callback(undefined, {
                     currentTemp: response.body.currently.temperature,
-                    currentRain: response.body.currently.precipProbability
+                    currentRain: response.body.currently.precipProbability,
+                    currentHumidity: response.body.currently.humidity,
+                    currentSummary: response.body.currently.summary,
+                    currentIcon: response.body.currently.icon
+
                 });
             }
         });
